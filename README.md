@@ -1,2 +1,2 @@
-# TimingGate1
-TimingGate 1 files for personal use
+# Timing gate
+Software for timing gate
