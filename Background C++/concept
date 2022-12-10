@@ -2,6 +2,30 @@
 #include <chrono>
 #include <iostream>
 
+#Define PIN_START 17
+#Define PIN_STOP 18
+
+int main (int argc, char **argv)
+{
+    wiringPiSetupGpio();
+    pinMode(PIN_START, OUTPUT);
+    pinMode(PIN_STOP, INPUT);
+    printf("LED and button pins have beens setup.\n");
+    
+    while (1)
+    {   
+        if (digitalRead(PIN_START) == HIGH) {
+            digitalWrite(PIN_LED, HIGH);
+        }
+        else {
+            digitalWrite(PIN_LED, LOW);
+        }
+        
+        std::this_thread::sleep_for(std::chrono::milliseconds(10));
+    }
+}
+
+
 template <typename Clock = std::chrono::steady_clock>
 class stopwatch
 {
