@@ -14,7 +14,7 @@ int main (int argc, char **argv)
     
     while (1)
     {   
-        if (digitalRead(PIN_START) == HIGH) {
+        if (digitalRead(PIN_START) == HIGH) { *IF StartButtonInterface activated, PIN_START = High else Low)(If Pin_STOP = High), stop timer*
             digitalWrite(PIN_LED, HIGH);
         }
         else {
