@@ -61,6 +61,29 @@ lv_obj_t * ui_Menu4;
 lv_obj_t * ui_Label37;
 lv_obj_t * ui_Label38;
 
+int main(int argc, char **argv)
+{
+  (void)argc; /*Unused*/
+  (void)argv; /*Unused*/
+
+  /*Initialize LVGL*/
+  lv_init();
+  /*Initialize the HAL (display, input devices, tick) for LVGL*/
+  hal_init();
+
+  demo_reTerminal_UI();
+
+  while(1) {
+      /* Periodically call the lv_task handler.
+       * It could be done in a timer interrupt or an OS task too.*/
+      lv_timer_handler();
+      usleep(5 * 1000);
+  }
+
+  return 0;
+}
+
+
 ///////////////////// TEST LVGL SETTINGS ////////////////////
 #if LV_COLOR_DEPTH != 32
     #error "LV_COLOR_DEPTH should be 32bit to match SquareLine Studio's settings"
