@@ -10,14 +10,6 @@
 #include <SDL2/SDL.h>
 #include "lvgl/lvgl.h"
 
-#include "lv_reterminal_demos/lv_demo_reterminal_UI/demo_reterminal_UI.h"
-
-#include "lv_drivers/display/monitor.h"
-#include "lv_drivers/display/fbdev.h"
-#include "lv_drivers/indev/mouse.h"
-#include "lv_drivers/indev/keyboard.h"
-#include "lv_drivers/indev/mousewheel.h"
-
 #include "ui.h"
 #include "ui_helpers.h"
 
