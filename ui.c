@@ -3,6 +3,21 @@
 // LVGL VERSION: 8.2
 // PROJECT: Timinggate_test
 
+#define _DEFAULT_SOURCE /* needed for usleep() */
+#include <stdlib.h>
+#include <unistd.h>
+#define SDL_MAIN_HANDLED /*To fix SDL's "undefined reference to WinMain" issue*/
+#include <SDL2/SDL.h>
+#include "lvgl/lvgl.h"
+
+#include "lv_reterminal_demos/lv_demo_reterminal_UI/demo_reterminal_UI.h"
+
+#include "lv_drivers/display/monitor.h"
+#include "lv_drivers/display/fbdev.h"
+#include "lv_drivers/indev/mouse.h"
+#include "lv_drivers/indev/keyboard.h"
+#include "lv_drivers/indev/mousewheel.h"
+
 #include "ui.h"
 #include "ui_helpers.h"
 
